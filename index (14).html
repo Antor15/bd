@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #474e5d;
+    font-family: Helvetica, sans-serif;
+}
+
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+.left {
+    left: 0;
+}
+
+.right {
+    left: 50%;
+}
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+.right::after {
+    left: -16px;
+}
+
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+ 
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  .right {
+    left: 0%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>হুমায়ূন আহমেদ</h2>
+      <p>জীবনে কিছু কিছু প্রশ্ন থাকে যার উত্তর কখনও মিলেনা, কিছু কিছু ভুল থাকে যা শোধরানো যায়না, আর কিছু কিছু কষ্ট থাকে যা কাউকে বলা যায়না</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>এ পি জে আব্দুল কালাম</h2>
+      <p>“ভিন্নভাবে চিন্তা করার ও উদ্ভাবনের সাহস থাকতে হবে, অপরিচিত পথে চলার ও অসম্ভব জিনিস আবিষ্কারের সাহস থাকতে হবে এবং সমস্যাকে জয় করে সফল হতে হবে। এ সকল মহানগুণের দ্বারা তরুণদের চালিত হতে হবে। তরুণ প্রজন্মের প্রতি এই আমার বার্তা।<br>যদি তুমি তোমার কাজকে স্যালুট কর, দেখো তোমায় আর কাউকে স্যালুট করতে হবে না। কিন্তু তুমি যদি তোমার কাজকে অসম্মান কর, অমর্যাদা কর, ফাঁকি দাও, তাহলে তোমায় সবাইকে স্যালুট করতে হবে। ”</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>স্টিফেন হকিং</h2>
+      <p>কৃত্রিম বুদ্ধিমত্তার আদিম রূপ ইতিমধ্যেই আমাদের হাতে আছে, যা খুব প্রয়োজনীয় বলে নিজেকে প্রমাণ করেছেন। তবে আমি মনে করি, কৃত্রিম বুদ্ধিমত্তার পূর্ণাঙ্গ বিকাশ মানবজাতির অস্তিত্বের জন্যই হুমকির কারণ হবে<br>মৃত্যু নিয়ে আমি ভীত নই। কিন্তু মরার জন্য তাড়াও নেই আমার। তার আগে করার মতো অনেক কিছু আছে আমার</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>হুমায়ূন আজাদ</h2>
+      <p>এদেশের মুসলমান এক সময় মুসলমান বাঙালি, তারপর বাঙালি মুসলামান, তারপর বাঙালি হয়েছিলো; এখন আবার তারা বাঙালি থেকে বাঙালি মুসলমান, বাঙালি মুসলমান থেকে মুসলমান বাঙালি, এবং মুসলমান বাঙালি থেকে মুসলমান হচ্ছে। পৌত্রের ঔরষে জন্ম নিচ্ছে পিতামহ</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>মহাত্মা গান্ধী</h2>
+      <p>এমনভাবে অধ্যায়ন করবে, যেন তোমার সময়াভাব নেই, তুমি চিরজীবী। এমনভাবে জীবনযাত্রা নির্বাহ করবে, যেন মনে হয় তুমি আগামীকালই মারা যাবে।</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>গৌতম বুদ্ধ</h2>
+      <p>পরের কৃত ও অকৃত কার্যের প্রতি লক্ষ্য না রেখে নিজের কৃত ও অকৃত কার্যের প্রতি লক্ষ্য রাখবে<br>যিনি উপদেশ দেন, অনুশাসন করেন এবং অসভ্যতা নিবারণ করেন তিনি অসতের অপ্রিয় এবং সৎলোকের প্রিয় হন</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>মার্ক জাকারবার্গ</h2>
+      <p>“ আমরা মানুষের সম্পর্কে কী জানতে চাই, সেটি প্রশ্ন না। প্রশ্ন হল মানুষ তাদের সম্পর্কে কতটুকু জানাতে চায়।<br>কেউ কেউ খুব স্মার্ট কিংবা দক্ষ হতে পারে, কিন্তু তারা যদি তাতে বিশ্বাস না রাখে, তাহলে তারা কঠোর পরিশ্রমে আগ্রহী হয় না  ”</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>রুদ্র মুহাম্মদ শহীদুল্লাহ</h2>
+      <p>এই সৌরমন্ডলের এই পৃথিবীর এক কীর্তনখোলা নদীর পাড়ে যে-শিশুর জন্ম । দিগন্তবিস্তৃত মাঠে ছুটে বেড়ানোর অদম্য স্বপ্ন যে-কিশোরের । জ্যোৎস্না যাকে প্লাবিত করে । বনভূমি যাকে দুর্বিনীত করে । নদীর জোয়াড় যাকে ডাকে নশার ডাকের মতো । অথচ যার ঘাড়ে চাপিয়ে দেয়া হয়েছে ঔপনিবেশিক জোয়াল গোলাম বানানোর শিক্ষাযন্ত্র । অথচ যার ঘাড়ে চাপিয়ে দেয়া হয়েছে এক হৃদয়হীন ধর্মের আচার । অথচ যাকে শৃঙ্খলিত করা হয়েছে স্বপ্নহীন সংস্কারে ।</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>জর্জ বার্নার্ড শ</h2>
+      <p>অন্যের অটোগ্রাফ সংগ্রহ করে সময় নষ্ট না করে নিজেকে বরং উপযোগী করে তোল যাতে অন্যেরা তোমার অটোগ্রাফ সংগ্রহ করে</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>সমরেশ মজুমদার</h2>
+      <p>নিজের বোকামি বুঝতে পারার পর কারো দুঃখ হয়, কারো হাসি পায়</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>শাইখ ইয়াসির ক্বাদী</h2>
+      <p>অন্যদের ভুল থেকে শিক্ষাগ্রহণ করুন এবং সেইরকম মানুষ হয়ে যাওয়া থেকে নিজেকে বিরত রাখুন যাদের ভুলগুলো থেকে অন্যেরা শিক্ষাগ্রহণ করে।</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>জুল ফেইফার</h2>
+      <p>আমি ভাবতাম, আমি গরিব। তারা বলল, আমি গরিব নই, অভাবগ্রস্ত। তারা বলেছিল, নিজেকে অভাবগ্রস্ত ভাবাটা আত্মপ্রবঞ্চনা। আমি বঞ্চিত। ওহ্, না। ঠিক বঞ্চিত না, স্বল্প অধিকারপ্রাপ্ত। তারপর তারা বলল, স্বল্প অধিকারপ্রাপ্ত কথাটা ব্যবহারজীর্ণ। আমি হলাম সাফল্যের পথে বাধাপ্রাপ্ত। আমার কাছে এখনো একটা পয়সাও নেই। কিন্তু আমার শব্দভান্ডার বেশ সমৃদ্ধ হয়েছে</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
